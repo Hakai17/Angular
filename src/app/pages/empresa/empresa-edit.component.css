@@ -1,0 +1,81 @@
+/* container geral */
+.container {
+    max-width: 900px;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* título */
+  h2 {
+    text-align: center;
+    color: #343a40;
+    margin-bottom: 30px;
+  }
+
+  /* form-group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  /* labels */
+  label {
+    font-weight: bold;
+    color: #495057;
+  }
+
+  /* inputs */
+  input.form-control {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+  }
+
+  input.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 5px rgba(38, 143, 255, 0.5);
+  }
+
+  input[disabled] {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+  }
+
+  /* botões principais */
+  .btn {
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  /* botão salvar */
+  .btn-success {
+    background-color: #28a745;
+    border: 1px solid #28a745;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+
+  .btn-success:hover {
+    background-color: #218838;
+    border-color: #218838;
+  }
+
+  /* botão deletar */
+  .btn-danger {
+    background-color: #dc3545;
+    border: 1px solid #dc3545;
+    color: #fff;
+    font-size: 16px;
+    transition: all 0.3s;
+  }
+
+  .btn-danger:hover {
+    background-color: #c82333;
+    border-color: #c82333;
+  }

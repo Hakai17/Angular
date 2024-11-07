@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Editar Socio</h2>
+    <div *ngIf="socio">
+      <form (ngSubmit)="salvarSocio()">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" id="nome" [(ngModel)]="socio.nome" name="nome" required>
+        </div>
+        <div class="form-group">
+          <label for="cpf">CPF</label>
+          <input type="text" class="form-control" id="cpf" [(ngModel)]="socio.cpf" name="cpf" required>
+        </div>
+        <div class="form-group">
+          <label for="dataCriacao">Data de Criação</label>
+          <input type="text" class="form-control" id="dataCriacao" [(ngModel)]="socio.dataCriacao" name="dataCriacao" required disabled>
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Salvar</button>
+        <button type="button" class="btn btn-danger mt-3 ms-3" (click)="deletarSocio()">Deletar</button>
+      </form>
+    </div>
+  </div>

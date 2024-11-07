@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Cadastrar Novo Sócio</h2>
+    <form (ngSubmit)="createSocio()">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" [(ngModel)]="socio.nome" name="nome" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" [(ngModel)]="socio.cpf" name="cpf" class="form-control" mask="000.000.000-00" required>
+      </div>
+      <div class="form-group">
+        <label for="empresa_id">Empresa</label>
+        <select id="empresa_id" [(ngModel)]="socio.empresa.id" name="empresa_id" class="form-control" required>
+          <option *ngFor="let empresa of empresas" [value]="empresa.id">{{ empresa.nome }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-success mt-3">Cadastrar</button>
+      <button class="btn btn-danger mt-3 ms-3" [routerLink]="['/socio']">Cancelar</button>
+    </form>
+  </div>

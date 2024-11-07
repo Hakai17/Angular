@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>Empresas</h2>
+  <button class="btn btn-success mb-3" [routerLink]="['/empresa/new']">Cadastrar</button>
+  <button class="btn btn-danger mb-3 ms-3" [routerLink]="['/']">Voltar</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CNPJ</th>
+        <th>Data de Criação</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empresa of empresas">
+        <td>{{ empresa.id }}</td>
+        <td>{{ empresa.nome }}</td>
+        <td>{{ empresa.cnpj }}</td>
+        <td>{{ empresa.data_criacao | date: 'dd/MM/yyyy' }}</td>
+        <td>
+          <button class="btn btn-primary" [routerLink]="['/empresa/edit', empresa.id]">Editar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
